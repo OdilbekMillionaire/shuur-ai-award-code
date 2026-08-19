@@ -2,14 +2,14 @@
 
 The production SHUUR application is maintained in the private repository `OdilbekMillionaire/shuur.uz`. This public repository is a deliberately limited technical disclosure prepared for evaluation.
 
-## Verbatim production excerpts
+## Production-derived excerpts
 
-The following files are copied from the production codebase without credentials or production values:
+The following files are derived directly from corresponding production components, with disclosure-limiting edits where appropriate (for example, shortened comments or omission of surrounding private application dependencies):
 
 - `production-excerpts/lib/ai/model.ts` — model-selection and environment-bound configuration pattern.
 - `production-excerpts/lib/games/type-plan.ts` — game-type count rules, single-puzzle semantics, language-aware mode filtering, and play-time estimation.
 
-These excerpts are included to let reviewers inspect genuine production code while keeping the complete application private.
+No credential values, user data, signing material, or production secret values are included.
 
 ## Evaluation-safe implementation
 
