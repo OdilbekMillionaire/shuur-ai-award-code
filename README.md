@@ -34,7 +34,7 @@ Participation / performance analytics
 
 This repository intentionally contains two kinds of material:
 
-1. **Verbatim safe production excerpts** — selected files copied from the private production repository because they contain no credentials, user data, signing material, or production secrets.
+1. **Safe production-derived excerpts** — selected code from the private production repository that contains no credentials, user data, signing material, or production secret values.
 2. **A runnable evaluation-safe pipeline demo** — a compact, dependency-light representation of the same production design principles: structured AI output, strict validation, retry-on-invalid-output, game planning, and tests.
 
 The public demo is not a mock-up of a different product. It is an intentionally reduced disclosure surface derived from the production architecture so reviewers can inspect the technical approach without requiring the production repository to be made public.
@@ -43,7 +43,7 @@ The public demo is not a mock-up of a different product. It is an intentionally 
 
 ```text
 .
-├── production-excerpts/       # Safe verbatim excerpts from the private production repo
+├── production-excerpts/       # Safe production-derived code excerpts
 │   └── lib/
 │       ├── ai/model.ts
 │       └── games/type-plan.ts
@@ -83,15 +83,15 @@ No API key is required to run the tests. The AI boundary is dependency-injected 
 - **Bounded game-size rules shared between generation and product logic**
 - **Single-puzzle semantics for crossword/word-search modes**
 - **Hard context limits before model submission**
-- **Environment-based model configuration with no hard-coded secret**
+- **Environment-based model configuration with no hard-coded secret values**
 
 ## Security disclosure
 
 This repository deliberately does **not** contain:
 
 - API keys or OAuth secrets
-- Firebase service-account JSON
-- production database identifiers or credentials
+- Firebase service-account credentials
+- production database credentials or secret values
 - Vercel environment values
 - signing certificates / Android keystores
 - private admin configuration
@@ -104,8 +104,8 @@ See [`docs/SECURITY-SCOPE.md`](docs/SECURITY-SCOPE.md) for the disclosure policy
 
 ## Code provenance
 
-The private production repository is `OdilbekMillionaire/shuur.uz`. It remains private. The mapping between files in this repository and production components is documented in [`docs/CODE-PROVENANCE.md`](docs/CODE-PROVENANCE.md).
+The private production repository is `OdilbekMillionaire/shuur.uz`. It remains private. The relationship between files in this repository and production components is documented in [`docs/CODE-PROVENANCE.md`](docs/CODE-PROVENANCE.md).
 
-## Ownership
+## Ownership and use
 
-SHUUR is developed and operated by **OXFORDER LLC**. This public repository is provided for technical evaluation and transparency. Unless expressly stated otherwise, no open-source license is granted for the proprietary SHUUR source code contained here.
+SHUUR is developed and operated by **OXFORDER LLC**. This repository is published for technical evaluation and transparency. Public visibility does not grant permission to reuse proprietary SHUUR source code except where expressly stated. See [`LICENSE`](LICENSE).
