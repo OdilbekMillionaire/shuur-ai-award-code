@@ -1,0 +1,22 @@
+{
+  "name": "shuur-ai-award-code",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Security-sanitized technical evaluation excerpt of SHUUR for the President AI Award.",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
